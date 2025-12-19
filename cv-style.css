@@ -1,0 +1,213 @@
+/* Variables de couleurs */
+:root {
+    --main-blue: #2c3e50;    /* Bleu sombre pour la sidebar */
+    --accent-blue: #3498db;  /* Bleu clair pour les titres */
+    --text-dark: #333;
+    --text-light: #ecf0f1;
+    --bg-gray: #f4f7f6;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-gray);
+    color: var(--text-dark);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+/* Le conteneur principal (La feuille A4) */
+.cv-container {
+    background-color: white;
+    width: 21cm; /* Largeur A4 */
+    min-height: 29.7cm; /* Hauteur A4 min */
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* 1/3 gauche, 2/3 droite */
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+/* --- Colonne de Gauche --- */
+.left-column {
+    background-color: var(--main-blue);
+    color: var(--text-light);
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-blue);
+    object-fit: cover;
+    margin-bottom: 30px;
+}
+
+.contact-section, .skills-section {
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+.left-column h3 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.left-column p {
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-column ul {
+    list-style: none;
+}
+
+.left-column li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.skills-section h4 {
+    color: var(--accent-blue);
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+/* --- Colonne de Droite --- */
+.right-column {
+    padding: 40px;
+    background-color: white;
+}
+
+.header-name {
+    margin-bottom: 50px;
+}
+
+.header-name h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.text-blue {
+    color: var(--accent-blue);
+}
+
+.header-name h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #7f8c8d;
+    margin-top: 10px;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--main-blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--accent-blue);
+    padding-left: 15px;
+}
+
+.section {
+    margin-bottom: 40px;
+}
+
+/* Timeline pour Formation/Expérience */
+.timeline-item {
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.date {
+    min-width: 120px;
+    font-weight: bold;
+    color: var(--accent-blue);
+    font-size: 0.9rem;
+}
+
+.content h4 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.school {
+    font-style: italic;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+}
+
+/* --- Responsive (Mobile) --- */
+@media (max-width: 768px) {
+    .cv-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+        min-height: auto;
+    }
+    
+    body {
+        padding: 0;
+    }
+    
+    .left-column {
+        padding: 20px;
+    }
+}
+
+/* --- Impression (pour faire un PDF propre) --- */
+@media print {
+    body {
+        background: none;
+        padding: 0;
+    }
+    .cv-container {
+        box-shadow: none;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Style du bouton retour */
+.back-home-btn {
+    position: fixed; /* Reste fixe même si on scrolle */
+    top: 20px;
+    left: 20px;
+    background-color: var(--main-blue);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background 0.3s;
+    z-index: 1000; /* Pour être sûr qu'il soit au dessus de tout */
+}
+
+.back-home-btn:hover {
+    background-color: var(--accent-blue);
+}
+
+.back-home-btn i {
+    margin-right: 8px;
+}
+
+/* IMPORTANT : Cache le bouton quand on imprime (Ctrl+P) */
+@media print {
+    .back-home-btn {
+        display: none;
+    }
+}
