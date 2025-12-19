@@ -1,0 +1,317 @@
+/* Variables pour changement facile */
+:root {
+    --primary-color: #6c63ff; /* Violet moderne */
+    --bg-color: #0f172a;      /* Bleu nuit très sombre */
+    --bg-light: #1e293b;      /* Un peu plus clair pour les cartes */
+    --text-color: #f1f5f9;    /* Blanc cassé */
+    --text-muted: #94a3b8;    /* Gris pour le texte secondaire */
+}
+
+/* Reset de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Défilement fluide */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    position: fixed;
+    width: 100%;
+    background-color: rgba(15, 23, 42, 0.95);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    color: var(--text-muted);
+}
+
+/* Boutons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: transform 0.3s, background 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #5a52d5;
+    transform: translateY(-3px);
+}
+
+/* Sections Standards */
+.section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.bg-dark {
+    background-color: var(--bg-light);
+}
+
+/* Compétences (Badges) */
+.skills {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skill-tag {
+    background: var(--bg-light);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Grille de Projets */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    border: 1px solid #334155;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    height: 200px;
+    width: 100%;
+    /* Ici tu mettras tes images plus tard */
+}
+
+.card-info {
+    padding: 1.5rem;
+}
+
+.btn-small {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Formulaire */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #334155;
+    background: var(--bg-light);
+    color: white;
+    font-family: inherit;
+}
+
+input:focus, textarea:focus {
+    outline: 2px solid var(--primary-color);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    color: var(--text-muted);
+}
+
+/* Responsive Mobile */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; } /* Pour simplifier, on cache le menu sur mobile ici */
+    .section { padding: 3rem 5%; }
+}
+/* Ajoute un peu d'espace entre les boutons */
+.hero-btns {
+    display: flex;
+    gap: 15px; /* Espace entre les deux boutons */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style du bouton secondaire (contour uniquement) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+/* --- Styles Spécifiques aux Pages Stages --- */
+
+/* Header plus petit pour les pages internes */
+.stage-hero {
+    padding-top: 120px; /* Espace pour la navbar fixe */
+    padding-bottom: 50px;
+    background-color: var(--bg-color);
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.stage-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.stage-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.stage-meta span i {
+    margin-right: 5px;
+}
+
+/* Conteneur du texte */
+.stage-content {
+    max-width: 800px; /* Plus étroit pour une meilleure lecture */
+    margin: 0 auto;
+}
+
+.stage-block {
+    margin-bottom: 40px;
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.stage-block h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.stage-block h2 i {
+    margin-right: 10px;
+}
+
+/* Liste des missions */
+.mission-list {
+    list-style: none;
+}
+
+.mission-list li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.mission-list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.mission-list p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}

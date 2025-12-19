@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio | Développeur</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MonPortefolio</div>
+<ul class="nav-links">
+    <li><a href="#home">Accueil</a></li>
+    <li><a href="#about">À propos</a></li>
+    <li><a href="#stages">Stages</a></li> <li><a href="#projects">Projets</a></li>
+    <li><a href="cv.html">Mon CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+</ul>
+        <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero">
+
+        <div class="hero-content">
+            <h1>Bonjour, je suis <span class="highlight">Quentin</span></h1>
+            <h2 class="typing-text">Je crée des <span class="txt-type" data-wait="3000"
+                    data-words='["sites web.", "applications."]'></span></h2>
+            <a href="#projects" class="btn">Voir mes travaux</a>
+            <a href="cv.html" class="btn btn-outline">Voir mon CV</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Passionné par le développement web et le design, je transforme des idées complexes en interfaces
+                        simples et intuitives. J'aime résoudre des problèmes et apprendre de nouvelles technologies.
+                        Pour m'améliorer dans ce
+                        domaine je suis actuellement en BTS SIO.</p>
+
+                    <div class="skills">
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="stages" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Mes Stages SIO</h2>
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <div class="card-image"
+                        style="background-color: #e67e22; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-network-wired" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Stage 1ère Année</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">Technicien Support & Réseau</p>
+                        <p style="margin-top: 10px;">Maintenance de parc informatique, assistance utilisateur et
+                            initiation au web.</p>
+                        <a href="stage_sio1.html" class="btn-small">Lire le rapport <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-image"
+                        style="background-color: #8e44ad; display:flex; align-items:center; justify-content:center;">
+                        <i class="fas fa-code" style="font-size: 3rem; color: white;"></i>
+                    </div>
+                    <div class="card-info">
+                        <h3>Stage 2ème Année</h3>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">pas encore de données</p>
+                        <p style="margin-top: 10px;">Pas encore de données</p>
+                        <a href="stage_sio2.html" class="btn-small">Lire le rapport <i
+                                class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="section bg-dark">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card-image" style="background-color: #3498db;"></div>
+                    <div class="card-info">
+                        <h3>Mon Portefolio</h3>
+                        <p>C'est un projet d'étude</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Quentin De Poli" required>
+                <input type="email" placeholder="qdepoli@email.com" required>
+                <button type="submit" class="btn">Envoyer</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MonPortefolio. </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
