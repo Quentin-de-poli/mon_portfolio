@@ -134,13 +134,23 @@ body {
 
 .skill-tag {
     background: var(--bg-light);
+    border: 1px solid var(--primary-color);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
+
+/* Grille de Projets */
+.projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
 .project-card {
+    background: var(--bg-color);
+    border-radius: 10px;
+    overflow: hidden;
     transition: transform 0.3s;
     border: 1px solid #334155;
 }
@@ -155,6 +165,9 @@ body {
     /* Ici tu mettras tes images plus tard */
 }
 
+.card-info {
+    padding: 1.5rem;
+}
 
 .btn-small {
     display: inline-block;
@@ -169,12 +182,18 @@ body {
     max-width: 600px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
 input, textarea {
     padding: 1rem;
     border-radius: 5px;
     border: 1px solid #334155;
     background: var(--bg-light);
+    color: white;
+    font-family: inherit;
+}
 
 input:focus, textarea:focus {
     outline: 2px solid var(--primary-color);
@@ -193,22 +212,106 @@ footer {
     .hero h1 { font-size: 2.5rem; }
     .nav-links { display: none; } /* Pour simplifier, on cache le menu sur mobile ici */
     .section { padding: 3rem 5%; }
-}    color: white;
-    font-family: inherit;
 }
-    flex-direction: column;
-    gap: 1rem;
+/* Ajoute un peu d'espace entre les boutons */
+.hero-btns {
+    display: flex;
+    gap: 15px; /* Espace entre les deux boutons */
+    justify-content: center;
+    margin-top: 20px;
 }
-.card-info {
-    padding: 1.5rem;
-}
-    background: var(--bg-color);
-    border-radius: 10px;
-    overflow: hidden;
 
-/* Grille de Projets */
-.projects-grid {
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
+/* Style du bouton secondaire (contour uniquement) */
+.btn-outline {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.btn-outline:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+}
+/* --- Styles Spécifiques aux Pages Stages --- */
+
+/* Header plus petit pour les pages internes */
+.stage-hero {
+    padding-top: 120px; /* Espace pour la navbar fixe */
+    padding-bottom: 50px;
+    background-color: var(--bg-color);
+    text-align: center;
+    border-bottom: 1px solid #334155;
+}
+
+.stage-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.stage-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
     font-size: 0.9rem;
+    color: var(--primary-color);
+}
 
+.stage-meta span i {
+    margin-right: 5px;
+}
+
+/* Conteneur du texte */
+.stage-content {
+    max-width: 800px; /* Plus étroit pour une meilleure lecture */
+    margin: 0 auto;
+}
+
+.stage-block {
+    margin-bottom: 40px;
+    background: var(--bg-light);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #334155;
+}
+
+.stage-block h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 1px solid #334155;
+    padding-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.stage-block h2 i {
+    margin-right: 10px;
+}
+
+/* Liste des missions */
+.mission-list {
+    list-style: none;
+}
+
+.mission-list li {
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 3px solid var(--primary-color);
+}
+
+.mission-list h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: var(--text-color);
+}
+
+.mission-list p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
